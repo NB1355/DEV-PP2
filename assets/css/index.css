@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
+
+
+/* checks for dev */
+.check0 {
+  background-color: orange;
+  color: black;
+  line-height: 75px;
+  align-items: center;
+  
+
+}
+.check1 {
+  background-color: greenyellow;
+  z-index: 2;
+}  
+  .check2{
+  background-color: green;
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ 
+
+body {
+  font-family: Lato, sans-serif;
+  color: #0c162c;
+} 
+
+h1 {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #0c162c;
+}
+
+h2,
+h3 {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #d6d8db;
+} */
+
+
+hr {
+  border-top: 1px solid #fff;
+  margin-top: 2px;
+  width: 90%;
+}
+
+
+
+/*============================================ HEADER ========*/
+/* #menu,
+#logo {
+  line-height: 75px;
+  align-items: center;
+} */
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+#hLogo{
+  /* font-size: 240%; */
+  margin-left: 30px;
+  width: 20%;
+
+
+}
+
+#hMenue {
+  margin-right: 30px;
+  width: 80%;
+  display: inline-block;
+}
+
+
+/* #logo {
+  
+  float: left;
+  font-size: 240%;
+  margin-left: 30px;
+
+} */
+
+
+#menu {
+  font-size: 110%;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+
+
+#menu li {
+  /* float: left; */
+  list-style-type: none;
+  margin-right: 20px;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#menu a:hover {
+  border-bottom: 2px solid #0c162c;
+  background-color: #0c162c;
+  background-size: 120%;
+  color: #fff;
+}
+
+
+/* Select part shoyl start under the header */
