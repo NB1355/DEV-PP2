@@ -1,20 +1,3 @@
-.form-section i {
-    font-size: 160%;
-   }
-   
-  .form-section {
-    clear: left;
-    /* background: url('../images/main/1.1.jpg'); */
-    background-size: cover;
-    background-position: center;
-    height: 900px;
-  }
-  
-  .form-section div {
-    float: right;
-    
-  }
-  
   .contact-form {
     margin: 150px 0 0 0 ;
     color: #fff;

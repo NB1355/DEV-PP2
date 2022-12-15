@@ -73,9 +73,13 @@ nav li {
 /*---------------------------Content----------------*/
 
 .content {
-  background-color: gray;
-  grid-area: content;
+ grid-area: content;
+ background: url("../images/background.jpg") no-repeat;
+ width: 100%;
 }
+
+
+
 
 /*---------------------------Footer-----------------*/
 
