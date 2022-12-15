@@ -1,42 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
 
-
-/* checks for dev */
-.check0 {
-  background-color: orange;
-  color: black;
-  line-height: 75px;
-  align-items: center;
-  
-
-}
-.check1 {
-  background-color: greenyellow;
-  z-index: 2;
-}  
-  .check2{
-  background-color: green;
- 
-}
-
 * {
   margin: 0;
   padding: 0;
   border: none;
+  text-decoration: none;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
- 
 
 body {
   font-family: Lato, sans-serif;
   color: #0c162c;
-} 
+}
 
 h1 {
   font-family: Oswald, sans-serif;
@@ -51,8 +25,8 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #d6d8db;
-} */
 
+}
 
 hr {
   border-top: 1px solid #fff;
@@ -60,72 +34,95 @@ hr {
   width: 90%;
 }
 
+/*---------------------------Grid Structure--------*/
+.grid-wrap {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}
 
 
-/*============================================ HEADER ========*/
-/* #menu,
-#logo {
-  line-height: 75px;
-  align-items: center;
-} */
+/*---------------------------Header & Navigation----*/
+header {  
+background-color: green;
+grid-area: header;
+}
 
-header {
+nav {
+  background-color: orange;
+  grid-area: nav;
+}
+
+nav ul {
   display: flex;
-  flex-direction: row;
-}
-
-#hLogo{
-  /* font-size: 240%; */
-  margin-left: 30px;
-  width: 20%;
-
-
-}
-
-#hMenue {
-  margin-right: 30px;
-  width: 80%;
-  display: inline-block;
-}
-
-
-/* #logo {
-  
-  float: left;
-  font-size: 240%;
-  margin-left: 30px;
-
-} */
-
-
-#menu {
-  font-size: 110%;
-  font-weight: bold;
-  letter-spacing: 4px;
-}
-
-
-
-#menu li {
-  /* float: left; */
+  float: right;
   list-style-type: none;
-  margin-right: 20px;
-
-  display: flex;
-  flex-flow: row wrap;
 }
 
-#menu a {
-  text-decoration: none;
-  color: inherit;
+nav li {
+  margin-left: 20px;
+  list-style-type: none;
 }
 
-#menu a:hover {
-  border-bottom: 2px solid #0c162c;
-  background-color: #0c162c;
-  background-size: 120%;
-  color: #fff;
+/*---------------------------Content----------------*/
+
+.content {
+  background-color: gray;
+  grid-area: content;
+}
+
+/*---------------------------Footer-----------------*/
+
+footer {
+  background-color: blue;
+  grid-area: footer;
+  position: relative;
+  height: 100px;
+
+}
+
+footer div {
+  text-align: center;
+  padding-right: 30px;
+}
+
+footer li {
+  display: inline-block;
+  padding: 10px;
+}
+
+footer i {
+  font-size: 160%;
+  color: #0c162c;
+
+}
+
+footer p {
+  font-size: x-small;
+
 }
 
 
-/* Select part shoyl start under the header */
+/*---------------------------Responsivity------------*/
+
+@media (min-width: 500px) {
+  
+  .grid-wrap {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "header nav"
+      "content content"
+      "footer footer";
+  }
+  
+  nav ul {
+    display: flex;
+  
+  }
+}

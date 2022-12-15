@@ -7,39 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/index.css">
-    <!-- <link rel="stylesheet" href="scripts.js"> - vs. end of body element ?-->
-
-
+    <link rel="stylesheet" href="assets/css/from.css">
     <title>DEV-PP2</title>
 </head>
 
 <body>
+    <div class="grid-wrap">    
+        <header>
+           <h1 id="logo">Project Portfolio II</h1>
+        </header>
+        <nav>   
+            <ul id="menu">
+                <li>
+                    <a href="contact.html" class="active">xxxx</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+        
+            <form method="POST" action="https://formdump.codeinstitute.net/" class="contact-form">
+            
+                <h2>Get in Touch <i class="fa-brands fa-think-peaks"></i></h2>
+            
 
-
-    <header>
-        <div id="hLogo">
-            <h1 id="logo">Project Portfolio II</h1>
+                <label for="fname">First Name</label>
+                <input class="text-input" type="text" id="fname" name="first_name" required>
+                
+                <label for="lname">Last Name</label>
+                <input class="text-input" type="text" id="lname" name="last_name" required>
+                
+                <label for="email">Email Address</label>
+                <input class="text-input" type="email" id="email" name="email_address" required>      
+                
+                <p>Interest in Professinal Programs</p>
+                <div>
+                    
+                    <label for="sommer">Sommer</label>
+                    <input type="radio" id="sommer" name="pro-event" value="sommer" >
+                    
+                    <label for="winter">  Winter</label>
+                    <input type="radio" id="winter" name="pro-event" value="winter" >
+                    
+                    <label for="both">  Both</label>
+                    <input type="radio" id="both" name="pro-event" value="both" >
+                
+                </div>    
+                                
+                <div>
+                    <p>Your Message</p>
+                    <textarea name="message" rows="5" cols="52" ></textarea>
+                </div>
+                
+                <div>
+                    <input class="send-button" type="submit" value="send">
+                </div>
+                
+                </form>
+            </div>
+            <footer>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com" target="_blank" rel="noopenner"
+                                aria-label="Visit our Facebook page (opens in new tab)">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank" rel="noopenner"
+                                aria-label="Visit our twitter page (opens in new tab)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com" target="_blank" rel="noopenner"
+                                aria-label="Visit our youtube page (opens in new tab)">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopenner"
+                                aria-label="Visit our instagram page (opens in new tab)">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div> 
+                    <p>© 2023</p>
+                </div>
+                
+            </footer>
+        
+        
+            <!--Script of FONTAESOME for the used icons-->
+            <script src="https://kit.fontawesome.com/f24292f78f.js" crossorigin="anonymous"></script>
         </div>
-        <div id="hMenue">
-            <nav>
-                <ul id="menu">
-                    <li>
-                        <a href="contact.html" class="active">xxxx</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="active">Home</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
 
 
-
-    <section id="select" class="check1">Select</section>
-
-    <section id="content" class="check2">Content</section>
 
     <script src="assets/js/scripts.js"></script>
 </body>
