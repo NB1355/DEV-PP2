@@ -1,5 +1,15 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-# PP2 Dev/ Idea 
+# Project Idea
+## Test Generator
+![Alt text](assets/images/idea.jpg)
+## Requirements
+* Upload Test Questions
+* Generate 10 Random Question
+* Option to set the timer
+* Option to quit/reset
+* Process and score the questioner 
+* Option to email the result 
+ 
+
 ## JavaScript / Interactive web page
 ## Commit rules
 * CA   > Code Added
