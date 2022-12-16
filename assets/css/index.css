@@ -6,12 +6,14 @@
   border: none;
   box-sizing: border-box;
   text-decoration: none;
+
 }
 
 body {
   font-family: Lato, sans-serif;
-  color: #0c162c;
-  background-color: gray;
+  color:#0c162c;
+  font-size: 120%;
+  font-weight: bold;
 }
 
 h1 {
@@ -39,18 +41,17 @@ hr {
 /*---------------------------Grid Structure--------*/
 .grid-wrap {
   display: grid;
-  /* gap: 10px; */
-  /* margin-left: 10px;
-  margin-right: 10px; */
+  gap: 10px;
   grid-template-areas:
     "header"
     "social"
     "timer"
     "quiz"
     "score"
-    "questions"
+    "upload"
     "footer";
 }
+
 
 
 /*---------------------------Header & Navigation----*/
@@ -87,21 +88,26 @@ header {
   /* background-attachment: fixed; */
 }
 
-.questions {
-  grid-area: questions;
+.upload {
+  grid-area: upload;
   background-color: yellow;
+  font-size: smaller;
+  font-family:'lato', Courier, monospace;
 }
 
 .timer {
   grid-area: timer;
-  background-color: red;
+  background-color: orange;
 
 }
-
 .score {
   grid-area: score;
   background-color: greenyellow;
 }
+
+
+
+
 
 
 /*---------------------------Footer-----------------*/
@@ -121,7 +127,7 @@ footer {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
       "header social"
-      "quiz questions"
+      "quiz upload"
       "quiz timer"
       "quiz score"
       "footer footer";
