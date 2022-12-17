@@ -12,9 +12,7 @@
 body {
   font-family: Lato, sans-serif;
   color:#0c162c;
-  font-size: 120%;
-  font-weight: bold;
-}
+  }
 
 h1 {
   font-family: Oswald, sans-serif;
@@ -52,9 +50,6 @@ hr {
     "footer";
 }
 
-
-
-/*---------------------------Header & Navigation----*/
 header {
   background-color: orange;
   grid-area: header;
@@ -64,15 +59,16 @@ header {
 .social {
   text-align: center;
   background-color: aqua;
+  grid-area: social ;
 }
 
 .social li {
   display: inline-block;
   padding: 10px;
-}
+ }
 
 .social i {
-   color: #0c162c;
+   color:#0c162c;
    font-size: 120%;
 }
 
@@ -105,7 +101,10 @@ header {
   background-color: greenyellow;
 }
 
-
+/*--------------------Quiz Process Relevant-----------------*/
+.answers{
+  display: none;
+}
 
 
 
