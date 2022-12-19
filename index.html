@@ -53,32 +53,32 @@
                 <br>
                 <div class="x-checkbox">
                     <!-- <h4>Questin 0001 ................</h4> -->
-                    
-                    <label id="qID" ></label><br>
+
+                    <label id="qID"></label><br>
                     <label id="qText"></label><br><br>
-                    
+
                     <input type="checkbox" id="option1" name="pro-event" value="option1">
                     <input type="checkbox" id="checkbox1" name="pro-event" value="checkbox1" class="answers">
-                    <label id ="A" for="option1"></label><br>
+                    <label id="A" for="option1"></label><br>
 
                     <input type="checkbox" id="option2" name="pro-event" value="option2">
                     <input type="checkbox" id="checkbox2" name="pro-event" value="checkbox2" class="answers">
-                    <label id ="B" for="option2"></label><br>
+                    <label id="B" for="option2"></label><br>
 
                     <input type="checkbox" id="option3" name="pro-event" value="option3">
                     <input type="checkbox" id="checkbox3" name="pro-event" value="checkbox3" class="answers">
-                    <label id ="C" for="option3"></label><br>
+                    <label id="C" for="option3"></label><br>
 
                     <input type="checkbox" id="option4" name="pro-event" value="option4">
                     <input type="checkbox" id="checkbox4" name="pro-event" value="checkbox4" class="answers">
-                    <label id ="D" for="option4"></label>
+                    <label id="D" for="option4"></label>
                     <br>
-                    <label id="corrects" ></label><br>
+                    <label id="corrects"></label><br>
 
                 </div>
                 <div>
-                    <input type="submit" class="x-button" id="x0-button" Value="Submit" >
-
+                    <!-- <input type="submit" class="x-button" id="x0-button" Value="Submit" > -->
+                    <input type="button" class="x-button" id="x2-button" value="Show The Next Questions">
                     <input type="button" class="x-button" id="x1-button" value="Click here to start">
 
                     <!-- <button class="x-button" id="x1-button" onclick="testSrats">click here to start</button>
@@ -123,15 +123,22 @@
             </form>
 
 
-        </div> timer
+        </div>
 
-        <!--------------------------------------------------------------------------TIMER AREA-->
+        <!-- >> TIMER-------------------------------------------------------------->
+
+        <div>
+            <label>Clock</label><br>
+        <div id="timeNow"></div>
+        <p id="demo"></p>
+        </div>
+
+        <!-- Display the countdown timer in an element -->
         
-        <input type="checkbox" id="accept"> Accept 
 
-        <!-------------------------------------------------------------------------- -END TIMER AREA -->
-        <!---STRART CORE AREA-------------------------------------------------------------------------->
+        <!-- << TIMER-------------------------------------------------------------->
 
+        <!-- >> SCORE-------------------------------------------------------------->
         <div class="score">
 
             <div id="counter">Score</div>
@@ -139,7 +146,7 @@
             <div id="status">Staus</div>
 
         </div>
-        <!-------------------------------------------------------------------------- END SCORE AREA -->
+        <!-- << SCORE-------------------------------------------------------------->
     </div>
 
     <footer>
@@ -154,6 +161,7 @@
 
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/timer.js"></script>
 </body>
 
 </html>
