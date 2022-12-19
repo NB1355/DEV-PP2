@@ -30,3 +30,16 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+
+
+// adapt ....
+
+const element = document.getElementById("timeNow");
+
+setInterval (function () {
+    const dateNow = new Date();
+    element.innerText = dateNow.getHours() + ":" +
+        dateNow.getMinutes() + ":" + dateNow.getSeconds();
+    }, 1000);

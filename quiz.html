@@ -2,29 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./assets/css/quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Check/uncheck checkboxes</title>
 </head>
 <body>
-    <div id="container">
-        <div id="start">Start Quiz!</div>
-        <div id="quiz" style="display: none">
-            <div id="question"></div>
-            <div id="qImg"></div>
-            <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-            </div>
-            <div id="timer">
-                <div id="counter"></div>
-                <div id="btimeGauge"></div>
-                <div id="timeGauge"></div>
-            </div>
-            <div id="progress"></div>
-        </div>
-        <div id="scoreContainer" style="display: none"></div>
-    </div>
-    <script src="/assets//js/quiz.js"></script>
-	<script src="/assets//js/questions.js"></script>
+    <p>
+        <button id="btn">Check / Uncheck All</button>
+    </p>
+    <label for="c1"><input type="checkbox" name="color" value="red" id="c1"> Red</label>
+    <label for="c2"><input type="checkbox" name="color" value="green" id="c2"> Green</label>
+    <label for="c3"> <input type="checkbox" name="color" value="blue" id="c3">Blue</label>
+
+    <script>
+        function check(checked = true) {
+            const checkboxes = document.querySelectorAll('input[name="color"]');
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = checked;
+            });
+        }
+
+        function checkAll() {
+            select();
+            this.onclick = uncheckAll;
+        }
+
+        function uncheckAll() {
+            select(false);
+            this.onclick = checkAll;
+        }
+
+        const btn = document.querySelector('#btn');
+        btn.onclick = checkAll;
+    </script>
+
 </body>
+</html>

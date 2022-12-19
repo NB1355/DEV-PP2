@@ -103,10 +103,12 @@ header {
 /*--------------------Quiz Process Relevant-----------------*/
 .answers{
   /* display: none; */
-
   backdrop-filter: sepia(90%);
   opacity: 0.33;
+}
 
+.x-button {
+  display: none;
 }
 
 

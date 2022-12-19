@@ -1,10 +1,7 @@
 // Question source
 ///////////////////////get from jason upload ?!!!!!!!!!! select: ok, upload?
 
-// >> INPUT-------------------------------------------------------------->
-
-
-// >> Question Structure
+//Sample Structure
 
 let questions = [{
         qRefID: "q001",
@@ -67,40 +64,18 @@ let questions = [{
     }
 ];
 
-// >> Parameters to be set by user
+const start = document.getElementById("x1-button");
+// const next 
 
-let queryNumber = 5;
-let quizTime= 45; // munits to calculate 
+const lastQuestion = questions.length - 1;
 
-// >>  Variables Set up
-
-let totalNumber = questions.length;
-let activeQID = 0;
+let currentQuestion = 1;
 let count = 0;
 let score = 0;
 
-document.getElementById("x1-button").addEventListener("click", runQuiz);
+function showQuestion() {
+    let rq = questions[currentQuestion];
 
-function runQuiz() {
-
-    if (activeQID < queryNumber) {
-        document.getElementById("x1-button").value = "Go to next";
-        questionNext();
-        activeQID++;
-    } else {
-        // document.getElementById("x1-button").style.display = "none";
-        document.getElementById("x1-button").value = "Submit The Test";
-        document.getElementById("x1-button").type = "submit";
-
-    }
-}
-
-
-function questionNext() {
-
-    let rq = questions[activeQID];
-
-    // show questions 
     qID.innerHTML = rq.qRefID
     qText.innerHTML = rq.qRefText;
     A.innerHTML = rq.checkbox1;
@@ -128,15 +103,60 @@ function questionNext() {
                 break;
         }
 
-    };
 
-    //setup correct options
-   // optioneTrue (rq.qRefID);
+        // console.log(correct);
+    }
 }
 
 
-function optioneTrue (){
-    
-    
+start.addEventListener("click", runQuiz);
+next.addEventListener("click", runQuiz);
+
+function runQuiz() {
+
+    showQuestion();
+    i++
 }
 
+
+function check() {
+    document.getElementById().checked = check;
+}
+
+function uncheck() {
+    document.getElementById().checked = uncheck;
+}
+
+// test output
+// console.log(lastQuestion);
+// console.log(option1, option2);
+
+// function showStatus() {
+//     for (let rqIndex = 0; rqIndex <= lastQuestion; rqIndex++) {
+//         console.log("zzzz");
+
+
+//     }
+// }
+
+// function checkAnswer(answer) {
+//     if (answer == questions[currentQuestion].correct) {
+//         // answer is correct
+//         score++;
+//         // change progress color to green
+//         answerIsCorrect();
+//     } else {
+//         // answer is wrong
+//         // change progress color to red
+//         answerIsWrong();
+//     }
+//     count = 0;
+//     if (currentQuestion < lastQuestion) {
+//         runningQuestion++;
+//         showQuestion();
+//     } else {
+//         // end the quiz and show the score
+//         clearInterval(TIMER);
+//         scoreRender();
+//     }
+// }
