@@ -75,12 +75,25 @@ document.getElementById("x1-button").addEventListener("click", runQuiz);
 function runQuiz() {
 
     if (activeQID < queryNumber) {
+        document.getElementById("x1-button").value = "Go to next";
         questionNext();
         activeQID++;
     } else {
-        document.getElementById("x1-button").style.display = "none";
+        // document.getElementById("x1-button").style.display = "none";
+        document.getElementById("x1-button").value = "Submit The Test";
+        
     }
 }
+
+// function buttonText() {
+//     if (activeQID == 0){
+//         document.getElementById('x1-button').Value = "Lock";
+//     } else {
+//         document.getElementById('x1-button').VatextContent = "Go to next ...";
+        
+//     }
+    
+// }
 
 
 function questionNext() {
