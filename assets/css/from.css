@@ -67,7 +67,7 @@
     text-transform:uppercase;
     background-color: #98c004;
     color: #fafafa;   
-    display: none;
+    /* display: none; */
     
    
   } 
@@ -76,3 +76,8 @@
     background-color:  #fafafa;
     color: #98c004; 
   } 
+
+  /* teeeeeeeeeeeeeeeeeezt *
+  /const deadline = '2015-12-31';
+
+  

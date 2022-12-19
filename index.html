@@ -45,34 +45,40 @@
         </ul>
 
         <div class="quiz"> quiz area to set a backgroound photo
+            <a href="quiz.html">file upload test</a>
 
             <form class="x-form" method="POST" action="https://formdump.codeinstitute.net/">
 
                 <h2>Title Of the generated test <i class="fa-brands fa-think-peaks"></i></h2>
 
                 <div class="x-checkbox">
-                    <p><i class="fa-brands fa-think-peaks"></i> Questin 0001 ................</p>
+                    <h4 id="question" ><i class="fa-brands fa-think-peaks"></i> Questin 0001 ................</h4>
                     <br>
-                    <input type="checkbox" id="checkbox-1" name="pro-event" value="checkbox1">
-                    <input type="checkbox" id="checkbox-1a" name="pro-event" value="checkbox-1a" class="answers"
+                    <input type="checkbox" id="option1" name="pro-event" value="option1">
+                    <input type="checkbox" id="checkbox1" name="pro-event" value="checkbox1" class="answers"
                         checked>
-                    <label for="checkbox-1">Option1</label><br>
-                    <input type="checkbox" id="checkbox-2" name="pro-event" value="checkbox2">
-                    <input type="checkbox" id="checkbox-2a" name="pro-event" value="checkbox-2a" class="answers">
-                    <label for="checkbox-2">Option2</label><br>
-                    <input type="checkbox" id="checkbox-3" name="pro-event" value="checkbox-3">
-                    <input type="checkbox" id="checkbox-3a" name="pro-event" value="checkbox-3a" class="answers"
+                    <label for="option1">Option1</label><br>
+                    
+                    <input type="checkbox" id="option2" name="pro-event" value="option2">
+                    <input type="checkbox" id="checkbox2" name="pro-event" value="checkbox2" class="answers">
+                    <label for="option2">Option2</label><br>
+                    
+                    <input type="checkbox" id="option3" name="pro-event" value="option3">
+                    <input type="checkbox" id="checkbox3" name="pro-event" value="checkbox3" class="answers"
                         checked>
-                    <label for="checkbox3">Option3</label><br>
-                    <input type="checkbox" id="checkbox-4" name="pro-event" value="checkbox-4">
-                    <input type="checkbox" id="checkbox-4a" name="pro-event" value="checkbox-4a" class="answers">
-                    <label for="checkbox4">Option4</label>
+                    <label for="option3">Option3</label><br>
+                    
+                    <input type="checkbox" id="option4" name="pro-event" value="option4">
+                    <input type="checkbox" id="checkbox4" name="pro-event" value="checkbox4" class="answers">
+                    <label for="option4">Option4</label>
                 </div>
                 <div>
-                    <input type="submit" class="x-button" id="x0-button" onclick="submit">Submit your test and see the result</button>
+                    <input type="submit" class="x-button" id="x0-button" onclick="submit">Submit your test and see the
+                    result</button>
 
-                    <input type="button" class="x-button" id="x1-button" onclick="testStart" value="Click here to start">
-                    
+                    <input type="button" class="x-button" id="x1-button" 
+                        value="Click here to start">
+
                     <!-- <button class="x-button" id="x1-button" onclick="testSrats">click here to start</button>
                         tag button vs unput ?!!! 
                     -->
@@ -85,19 +91,23 @@
                     <button class="x-button" id="y2-button" onclick="goBack">Go to the previous question</button>
                     <button class="x-button" id="y3-button" onclick="bookMark">Go to the next question</button>
                  -->
-                 <!-- 
+                    <!-- 
                     [TBD IDEAS FOR NEXT PROJECTS]
                     Bookmarks: go to next/previous/last/first
                     Generate tests out of book marks
                     Generate tests out of mistakes
                     Option to save the test and resume later  <> via user account or via download and upload!  
                 -->
-                
-                    
+
+
 
                 </div>
             </form>
         </div>
+
+
+
+
         <div class="upload">
             <div id="test-type">
                 <input type="radio" name="x-radio" id="x1-radio" checked>
@@ -105,19 +115,33 @@
                 <input type="radio" name="x-radio" id="x2-radio">
                 <label for="x2-radio">Learn Mode</label>
             </div>
-        </div>
+            <form id="upload">
+                <label for="file">File to upload</label>
+                <input type="file" id="file" accept=".json">
 
-        <div class="timer">
+                <button>Upload</button>
+            </form>
 
-            timer
 
-        </div>
+        </div> timer
+        
+        <!--------------------------------------------------------------------------TIMER AREA-->
+
+        
+
+
+
+        <!-------------------------------------------------------------------------- -END TIMER AREA -->
+        <!---STRART CORE AREA-------------------------------------------------------------------------->
+
         <div class="score">
 
-            Score
+            <div id="counter">Score</div>
+            <div id="score-box"></div>
+            <div id="status">Staus</div>
 
         </div>
-
+        <!-------------------------------------------------------------------------- END SCORE AREA -->
     </div>
 
 
@@ -135,6 +159,6 @@
     <script src="https://kit.fontawesome.com/f24292f78f.js" crossorigin="anonymous"></script>
 
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/quiz.js"></script>
 </body>
-
 </html>

@@ -87,8 +87,7 @@ header {
 .upload {
   grid-area: upload;
   background-color: yellow;
-  font-size: smaller;
-  font-family:'lato', Courier, monospace;
+ 
 }
 
 .timer {
@@ -103,7 +102,11 @@ header {
 
 /*--------------------Quiz Process Relevant-----------------*/
 .answers{
-  display: none;
+  /* display: none; */
+
+  backdrop-filter: sepia(90%);
+  opacity: 0.33;
+
 }
 
 
