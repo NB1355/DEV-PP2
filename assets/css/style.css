@@ -36,7 +36,7 @@ hr {
   width: 90%;
 }
 
-/*---------------------------Grid Structure--------*/
+/*---------------------------Grid Structure----------------------------*/
 .grid-wrap {
   display: grid;
   gap: 10px;
@@ -72,7 +72,7 @@ header {
    font-size: 120%;
 }
 
-/*---------------------------Content----------------*/
+/*---------------------------Content-----------------------------------*/
 
 .quiz {
   background-color: royalblue;
@@ -100,21 +100,14 @@ header {
   background-color: greenyellow;
 }
 
-/*--------------------Quiz Process Relevant-----------------*/
+/*--------------------Quiz Process Relevant----------------------------*/
 .answers{
   /* display: none; */
   backdrop-filter: sepia(90%);
   opacity: 0.33;
 }
 
-.x-button {
-  display: none;
-}
-
-
-
-
-/*---------------------------Footer-----------------*/
+/*---------------------------Footer------------==================-----*/
 
 footer {
   grid-area: footer;
@@ -123,7 +116,7 @@ footer {
 
 }
 
-/*---------------------------Responsivity------------*/
+/*--------------------------GRid Responsivity--------------------------*/
 
 @media (min-width: 500px) {
   
@@ -139,11 +132,13 @@ footer {
 }
 
 
+/*
+/*
+/*
+/*
 
 
-
-
-/* >> form.css-------------------------------------------------------  */
+/* >> form.css---------------------------------------------------------*/
 
 .x-form {
     
@@ -223,3 +218,7 @@ footer {
     background-color:  #fafafa;
     color: #98c004; 
   } 
+
+  #x2-button {
+    display: none;
+  }
