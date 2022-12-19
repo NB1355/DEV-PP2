@@ -52,27 +52,32 @@
                 <h2>Title Of the generated test <i class="fa-brands fa-think-peaks"></i></h2>
                 <br>
                 <div class="x-checkbox">
-                    <h4 id="question">Questin 0001 ................</h4>
-                    <br>
+                    <!-- <h4>Questin 0001 ................</h4> -->
+                    
+                    <label id="qID" ></label><br>
+                    <label id="qText"></label><br><br>
+                    
                     <input type="checkbox" id="option1" name="pro-event" value="option1">
-                    <input type="checkbox" id="checkbox1" name="pro-event" value="checkbox1" class="answers" checked>
-                    <label id ="A" for="option1">Option................1</label><br>
+                    <input type="checkbox" id="checkbox1" name="pro-event" value="checkbox1" class="answers">
+                    <label id ="A" for="option1"></label><br>
 
                     <input type="checkbox" id="option2" name="pro-event" value="option2">
                     <input type="checkbox" id="checkbox2" name="pro-event" value="checkbox2" class="answers">
-                    <label id ="B" for="option2">Option2</label><br>
+                    <label id ="B" for="option2"></label><br>
 
                     <input type="checkbox" id="option3" name="pro-event" value="option3">
-                    <input type="checkbox" id="checkbox3" name="pro-event" value="checkbox3" class="answers" checked>
-                    <label id ="C" for="option3">Option3</label><br>
+                    <input type="checkbox" id="checkbox3" name="pro-event" value="checkbox3" class="answers">
+                    <label id ="C" for="option3"></label><br>
 
                     <input type="checkbox" id="option4" name="pro-event" value="option4">
                     <input type="checkbox" id="checkbox4" name="pro-event" value="checkbox4" class="answers">
-                    <label id ="D" for="option4">Option4</label>
+                    <label id ="D" for="option4"></label>
+                    <br>
+                    <label id="corrects" ></label><br>
+
                 </div>
                 <div>
-                    <input type="submit" class="x-button" id="x0-button" onclick="submit">Submit your test and see the
-                    result</button>
+                    <input type="submit" class="x-button" id="x0-button" Value="Submit" >
 
                     <input type="button" class="x-button" id="x1-button" value="Click here to start">
 
@@ -95,8 +100,6 @@
                     Generate tests out of mistakes
                     Option to save the test and resume later  <> via user account or via download and upload!  
                 -->
-
-
 
                 </div>
             </form>
@@ -124,11 +127,7 @@
 
         <!--------------------------------------------------------------------------TIMER AREA-->
         
-        
-        <p id="myP">   This element has extra spacing     and contains <span>a span element</span>.</p> 
-
-
-
+        <input type="checkbox" id="accept"> Accept 
 
         <!-------------------------------------------------------------------------- -END TIMER AREA -->
         <!---STRART CORE AREA-------------------------------------------------------------------------->
@@ -142,10 +141,6 @@
         </div>
         <!-------------------------------------------------------------------------- END SCORE AREA -->
     </div>
-
-
-
-
 
     <footer>
         <div>

@@ -10,7 +10,7 @@ let questions = [{
         checkbox2: "2q001 answer no.2 for question q001",
         checkbox3: "3q001 answer no.3 for question q001, correct",
         checkbox4: "4q001 answer no.4 for question q001, correct",
-        correct: "24"
+        corrects: "24"
     },
     {
         qRefID: "q002",
@@ -19,7 +19,7 @@ let questions = [{
         checkbox2: "2q002 answer no.2 for question q002",
         checkbox3: "3q002 answer no.3 for question q002",
         checkbox4: "4q002 answer no.4 for question q002, correct",
-        correct: "14"
+        corrects: "14"
     }, {
         qRefID: "q003",
         qRefText: "Question ID: q003 - sample question for testing",
@@ -27,7 +27,7 @@ let questions = [{
         checkbox2: "2q003 answer no.2 for question q003, correct",
         checkbox3: "3q003 answer no.3 for question q003",
         checkbox4: "4q003 answer no.4 for question q003",
-        correct: "2"
+        corrects: "2"
     }, {
         qRefID: "q004",
         qRefText: "Question ID: q004 - sample question for testing",
@@ -35,7 +35,7 @@ let questions = [{
         checkbox2: "2q001 answer no.2 for question q004, correct",
         checkbox3: "3q001 answer no.3 for question q004, correct",
         checkbox4: "4q001 answer no.4 for question q004, correct",
-        correct: "1234"
+        corrects: "1234"
     }, {
         qRefID: "q005",
         qRefText: "Question ID: q005 - sample question for testing",
@@ -43,7 +43,7 @@ let questions = [{
         checkbox2: "2q005 answer no.2 for question q005, correct",
         checkbox3: "3q005 answer no.3 for question q005",
         checkbox4: "4q005 answer no.4 for question q005, correct",
-        correct: "34"
+        corrects: "34"
     }, {
         qRefID: "q006",
         qRefText: "Question ID: q006 - sample question for testing",
@@ -51,7 +51,7 @@ let questions = [{
         checkbox2: "2q006 answer no.2 for question q006",
         checkbox3: "3q006 answer no.3 for question q006",
         checkbox4: "4q006 answer no.4 for question q006, correct",
-        correct: "14"
+        corrects: "14"
     },
     {
         qRefID: "q007",
@@ -60,86 +60,63 @@ let questions = [{
         checkbox2: "2q007 answer no.2 for question q007, correct",
         checkbox3: "3q007 answer no.3 for question q007, correct",
         checkbox4: "4q007 answer no.4 for question q007, correct",
-        correct: "1234"
+        corrects: "1234"
     }
 ];
 
-const start = document.getElementById("x1-button");
-
-// const question = document.getElementById("question");
-// const questionID = document.getElementById();
-
-// const option1 = document.getElementById("option1");
-// const option2 = document.getElementById("option2");
-// const option3 = document.getElementById("option2");
-// const option4 = document.getElementById("option2");
-// const counter = document.getElementById("counter");
-// const scoreBox = document.getElementById("score-box");
-// const statusBox = document.getElementById("status-box");
-
-const lastQuestion = questions.length - 1;
-
-let currentQuestion = 0;
+let queryNumber = 5; // to be set as an input 
+let totalNumber = questions.length;
+let activeQID = 0;
 let count = 0;
 let score = 0;
 
+document.getElementById("x1-button").addEventListener("click", runQuiz);
+
+function runQuiz() {
+
+    if (activeQID < queryNumber) {
+        questionNext();
+        activeQID++;
+    } else {
+        document.getElementById("x1-button").style.display = "none";
+    }
+}
 
 
+function questionNext() {
 
-function showQuestion() {
-    
-    let rq = questions[currentQuestion];
-    console.log(rq);
-    
-    
-    // qestion.innerHTML = "<h4>" + rq.question + "</h4>";
-    
+    let rq = questions[activeQID];
+
+    // show questions 
+    qID.innerHTML = rq.qRefID
+    qText.innerHTML = rq.qRefText;
     A.innerHTML = rq.checkbox1;
     B.innerHTML = rq.checkbox2;
     C.innerHTML = rq.checkbox3;
-    D.innerHTML = rq.checkbox4;   
+    D.innerHTML = rq.checkbox4;
+
+    //setup correct options
+
+
+    // xCorrects = rq.corrects;
+    // i = xCorrects.length;
+
+    // for (i = 0; i < xCorrects.length; i++) {
+    //     let correct = xCorrects.charAt(i);
+    //     switch (correct) {
+    //         case "1":
+    //             console.log(correct);
+    //             break;
+    //         case "2":
+    //             console.log(correct);
+    //             break;
+    //         case "3":
+    //             console.log(correct);
+    //             break;
+    //         case "4":
+    //             console.log(correct);
+    //             break;
+    //     }
+
+    // }
 }
-
-
-
-// test output
-// console.log(lastQuestion);
-// console.log(option1, option2);
-
-start.addEventListener("click", startQuiz);
-
-function startQuiz() {
-    
-       showQuestion();
-    // showStatus();
-}
-
-// function showStatus() {
-//     for (let rqIndex = 0; rqIndex <= lastQuestion; rqIndex++) {
-//         console.log("zzzz");
-
-
-//     }
-// }
-
-// function checkAnswer(answer) {
-//     if (answer == questions[currentQuestion].correct) {
-//         // answer is correct
-//         score++;
-//         // change progress color to green
-//         answerIsCorrect();
-//     } else {
-//         // answer is wrong
-//         // change progress color to red
-//         answerIsWrong();
-//     }
-//     count = 0;
-//     if (currentQuestion < lastQuestion) {
-//         runningQuestion++;
-//         showQuestion();
-//     } else {
-//         // end the quiz and show the score
-//         clearInterval(TIMER);
-//         scoreRender();
-//     }
-// }
