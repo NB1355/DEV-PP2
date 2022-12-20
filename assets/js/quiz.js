@@ -1,5 +1,5 @@
 // Question source
-///////////////////////get from jason upload ?!!!!!!!!!! select: ok, upload?
+/////////////////////get from jason upload ?!!!!!!!!!! select: ok, upload?
 
 // >> INPUT-------------------------------------------------------------->
 
@@ -13,7 +13,7 @@ let questions = [{
         checkbox2: "2q001 answer no.2 for question q001",
         checkbox3: "3q001 answer no.3 for question q001, correct",
         checkbox4: "4q001 answer no.4 for question q001, correct",
-        corrects: "24"
+        corrects: "24,r,3"
     },
     {
         qRefID: "q002",
@@ -70,7 +70,7 @@ let questions = [{
 // >> Parameters to be set by user
 
 let queryNumber = 5;
-let quizTime= 45; // munits to calculate 
+let quizTime = 45; // munits to calculate 
 
 // >>  Variables Set up
 
@@ -87,10 +87,13 @@ function runQuiz() {
         document.getElementById("x1-button").value = "Go to next";
         questionNext();
         activeQID++;
+
+        
     } else {
-        // document.getElementById("x1-button").style.display = "none";
-        document.getElementById("x1-button").value = "Submit The Test";
-        document.getElementById("x1-button").type = "submit";
+        document.getElementById("x1-button").style.display = "none";
+
+        // document.getElementById("x1-button").value = "Submit The Test";      
+        // document.getElementById("x1-button").type = "submit";
 
     }
 }
@@ -107,36 +110,42 @@ function questionNext() {
     B.innerHTML = rq.checkbox2;
     C.innerHTML = rq.checkbox3;
     D.innerHTML = rq.checkbox4;
-
     xCorrects = rq.corrects;
-    i = xCorrects.length;
+    
+    optionesTrue(xCorrects);
+
+    /// get answers
+    /// calculate score
+
+    // clear checked answers
+    document.getElementsByClassName("x-checkbox").checked = false ;
+
+
+
+
+};
+
+//setup correct options
+
+
+
+function optionesTrue() {
 
     for (i = 0; i < xCorrects.length; i++) {
         let correct = xCorrects.charAt(i);
         switch (correct) {
             case "1":
-                console.log(correct);
+                document.getElementById("checkbox1").checked = true;
                 break;
             case "2":
-                console.log(correct);
+                document.getElementById("checkbox2").checked = true;
                 break;
             case "3":
-                console.log(correct);
+                document.getElementById("checkbox3").checked = true;
                 break;
             case "4":
-                console.log(correct);
+                document.getElementById("checkbox4").checked = true;
                 break;
         }
-
-    };
-
-    //setup correct options
-   // optioneTrue (rq.qRefID);
+    }
 }
-
-
-function optioneTrue (){
-    
-    
-}
-

@@ -17,29 +17,6 @@ function handleSubmit (event) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // this.document.getElementById("x1-button").style.display = "block";
 
 // document.getElementById("x1-button").addEventListener("click", function (testStatus) {

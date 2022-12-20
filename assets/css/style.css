@@ -11,8 +11,8 @@
 
 body {
   font-family: Lato, sans-serif;
-  color:#0c162c;
-  }
+  color: #0c162c;
+}
 
 h1 {
   font-family: Oswald, sans-serif;
@@ -59,17 +59,17 @@ header {
 .social {
   text-align: center;
   background-color: aqua;
-  grid-area: social ;
+  grid-area: social;
 }
 
 .social li {
   display: inline-block;
   padding: 10px;
- }
+}
 
 .social i {
-   color:#0c162c;
-   font-size: 120%;
+  color: #0c162c;
+  font-size: 120%;
 }
 
 /*---------------------------Content-----------------------------------*/
@@ -87,7 +87,7 @@ header {
 .upload {
   grid-area: upload;
   background-color: yellow;
- 
+
 }
 
 .timer {
@@ -95,13 +95,14 @@ header {
   background-color: orange;
 
 }
+
 .score {
   grid-area: score;
   background-color: greenyellow;
 }
 
 /*--------------------Quiz Process Relevant----------------------------*/
-.answers{
+.answers {
   /* display: none; */
   backdrop-filter: sepia(90%);
   opacity: 0.33;
@@ -119,7 +120,7 @@ footer {
 /*--------------------------GRid Responsivity--------------------------*/
 
 @media (min-width: 500px) {
-  
+
   .grid-wrap {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
@@ -141,84 +142,87 @@ footer {
 /* >> form.css---------------------------------------------------------*/
 
 .x-form {
-    
-    color: #fff;
-    background-color: rgba(60, 60, 60, 0.8);
-    padding: 30px;   
-  }
 
-  .x-radio {
-    display: none;
-  }
-  .x-checkbox {
-    accent-color: #98c004;
-  }
+  color: #fff;
+  background-color: rgba(60, 60, 60, 0.8);
+  padding: 30px;
+}
 
-  #test-type , #test-type label {
-    display: inline-block;
-    padding-bottom: 20px;
-    font-size: small;
-    margin-right: 10px;
+.x-radio {
+  display: none;
+}
 
-  }
-    
-  .x-form h2 {
-    color: #fafafa;
-  }
-  
-  .x-form p {
-   color: greenyellow;
-   margin-bottom: 5px;
-   margin-top: 5px; 
-  }
+.x-checkbox {
+  accent-color: #98c004;
+}
 
-  .x-checkbox input {
-    margin-right: 10px;
-  }
-  .text-input {
-    background: transparent;
-    color: #fafafa;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0 ;
-    border: 1px solid #fafafa;
-    border-radius: 2px;
-  }
-  
-  .text-input:hover {
-    border-color: #98c004;
-  }
-  
-  #x-text {
-    overflow: auto;
-    width: 90%;
-    background: transparent;
-    border: none;
-    outline: none;
-  
-  }
-  
-  .x-button {
-    margin-top: 20px;
-    border-radius:2px;
-    padding: 5px 10px 5px 10px;
-    text-align: center;
-    height: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform:uppercase;
-    background-color: #98c004;
-    color: #fafafa;   
-    width: 100%;
-    
-   
-  } 
-  
-  .x-button:hover {
-    background-color:  #fafafa;
-    color: #98c004; 
-  } 
+#test-type,
+#test-type label {
+  display: inline-block;
+  padding-bottom: 20px;
+  font-size: small;
+  margin-right: 10px;
 
-  #x2-button {
-    display: none;
-  }
+}
+
+.x-form h2 {
+  color: #fafafa;
+}
+
+.x-form p {
+  color: greenyellow;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.x-checkbox input {
+  margin-right: 10px;
+}
+
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+}
+
+.text-input:hover {
+  border-color: #98c004;
+}
+
+#x-text {
+  overflow: auto;
+  width: 90%;
+  background: transparent;
+  border: none;
+  outline: none;
+
+}
+
+.x-button {
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  height: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #98c004;
+  color: #fafafa;
+  width: 100%;
+
+
+}
+
+.x-button:hover {
+  background-color: #fafafa;
+  color: #98c004;
+}
+
+#x2-button {
+  display: none;
+}
