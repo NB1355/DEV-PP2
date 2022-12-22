@@ -13,7 +13,7 @@ let questions = [{
         checkbox2: "2q001 answer no.2 for question q001",
         checkbox3: "3q001 answer no.3 for question q001, correct",
         checkbox4: "4q001 answer no.4 for question q001, correct",
-        corrects: "24,r,3"
+        corrects: "1,4,r,3"
     },
     {
         qRefID: "q002",
@@ -84,11 +84,12 @@ document.getElementById("x1-button").addEventListener("click", runQuiz);
 function runQuiz() {
 
     if (activeQID < queryNumber) {
+        optionsClear();
         document.getElementById("x1-button").value = "Go to next";
         questionNext();
         activeQID++;
+        document.getElementById("x1-button").addEventListener("focus", checkAnswer);
 
-        
     } else {
         document.getElementById("x1-button").style.display = "none";
 
@@ -111,23 +112,12 @@ function questionNext() {
     C.innerHTML = rq.checkbox3;
     D.innerHTML = rq.checkbox4;
     xCorrects = rq.corrects;
-    
+
     optionesTrue(xCorrects);
-
-    /// get answers
-    /// calculate score
-
-    // clear checked answers
-    document.getElementsByClassName("x-checkbox").checked = false ;
-
-
-
 
 };
 
 //setup correct options
-
-
 
 function optionesTrue() {
 
@@ -148,4 +138,57 @@ function optionesTrue() {
                 break;
         }
     }
+}
+
+function checkAnswer() {
+    let comp = 0;
+    let scoreMinus = 0;
+    let scorePlus = 0;
+
+
+    for (i = 1; i < 5; i++) {
+        // Get the checkbox
+        var oi = document.getElementById("option" + i);
+        var ci = document.getElementById("checkbox" + i);
+
+        if (ci.checked === oi.checked) {
+            comp++
+        };
+    }
+    if (comp == 4) {
+        scorePlus = scorePlus + 1;
+        document.getElementById("scorePlus").innerText = scorePlus;
+    } else {
+        scoreMinus = scoreMinus + 1;
+        document.getElementById("scoreMinus").innerText = scoreMinus;
+    }
+}
+
+
+
+function scorePlus() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+
+}
+
+
+function scoreMinus() {
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
+}
+
+
+function optionsClear() {
+    //
+
+    document.getElementById("checkbox1").checked = false;
+    document.getElementById("checkbox2").checked = false;
+    document.getElementById("checkbox3").checked = false;
+    document.getElementById("checkbox4").checked = false;
+
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = false;
+    document.getElementById("option3").checked = false;
+    document.getElementById("option4").checked = false;
 }
