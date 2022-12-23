@@ -53,7 +53,15 @@
 
             <form class="x-form" method="POST" action="https://formdump.codeinstitute.net/">
 
+
                 <h2>Title Of the generated test <i class="fa-brands fa-think-peaks"></i></h2>
+
+                <input type="button" id="xtest" value="Test Function" style="background-color: orange; padding: 10px;">
+
+
+
+
+                <!-- temp for test -->
                 <br>
                 <div class="x-checkbox">
                     <!-- <h4>Questin 0001 ................</h4> -->
@@ -80,11 +88,12 @@
                     <label id="corrects"></label><br>
 
                 </div>
-                <div>
-                    <!-- <input type="submit" class="x-button" id="x0-button" Value="Submit" > -->
-                    <!-- <input type="button" class="x-button" id="x2-button" value="Show The Next Questions"> -->
-                    <input type="button" class="x-button" id="x1-button" value="Click here to start">
-                    <input type="button" class="x-button" id="x2-button" value="Show the correct answer">
+                <div class="x-steps">
+                    <input type="button" class="x-button" id="x1-button" Value="Start The Test">
+                    <input type="button" class="x-button" id="x2-button" value="Show The Answer">
+                    <input type="button" class="x-button" id="x3-button" value="Go To Next">
+                    <input type="button" class="x-button" id="x4-button" value="Submit The Test">
+
                 </div>
             </form>
         </div>
@@ -106,7 +115,7 @@
 
         <!-- >> TIMER-------------------------------------------------------------->
 
-        <div>
+        <div calss="timer">
             <label>Clock</label><br>
             <div id="timeNow"></div>
             <p id="demo"></p>
@@ -124,8 +133,8 @@
             <div id="score-box"></div>
             <div id="status">Staus</div> 
         </div> -->
-        
-        <div class="score-area">
+
+        <div class="score">
             <p class="scores">Correct Answers <span id="scorePlus">0</span></p>
             <p class="scores">Incorrect Answers <span id="scoreMinus">0</span></p>
         </div>

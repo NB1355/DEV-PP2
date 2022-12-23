@@ -92,7 +92,7 @@ header {
 
 .timer {
   grid-area: timer;
-  background-color: orange;
+  background-color: red;
 
 }
 
@@ -103,7 +103,7 @@ header {
 
 /*--------------------Quiz Process Relevant----------------------------*/
 .answers {
-  /* display: none; */
+  display: none;
   backdrop-filter: sepia(90%);
   opacity: 0.33;
 }
@@ -154,6 +154,7 @@ footer {
 
 .x-checkbox {
   accent-color: #98c004;
+  display: none;
 }
 
 #test-type,
@@ -201,6 +202,7 @@ footer {
   outline: none;
 
 }
+ 
 
 .x-button {
   margin-top: 20px;
@@ -213,9 +215,15 @@ footer {
   text-transform: uppercase;
   background-color: #98c004;
   color: #fafafa;
-  width: 100%;
+  width: 20em;
+  font-size: 75%;
+  cursor: none;
+  display: none;
+}
 
-
+.x-button:disabled {
+  backdrop-filter: sepia(90%);
+  opacity: 0.33;
 }
 
 .x-button:hover {
@@ -223,6 +231,5 @@ footer {
   color: #98c004;
 }
 
-#x2-button {
-  display: none;
-}
+
+

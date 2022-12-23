@@ -67,28 +67,37 @@ let questions = [{
     }
 ];
 
+
 // >> Parameters to be set by user
 
-let queryNumber = 5;
+
+
+document.getElementById("xtest").addEventListener("click", randomSelect);
+
+
+
 let quizTime = 45; // munits to calculate 
 
 // >>  Variables Set up
 
-let totalNumber = questions.length;
+let max = questions.length;
 let activeQID = 0;
 let count = 0;
 let score = 0;
 
-document.getElementById("x1-button").addEventListener("click", runQuiz);
+let queryNumber = 5;
+const select = new Array();
 
 function runQuiz() {
 
     if (activeQID < queryNumber) {
+
+
         optionsClear();
         document.getElementById("x1-button").value = "Go to next";
         questionNext();
+        checkAnswers();
         activeQID++;
-        document.getElementById("x1-button").addEventListener("focus", checkAnswer);
 
     } else {
         document.getElementById("x1-button").style.display = "none";
@@ -102,7 +111,9 @@ function runQuiz() {
 
 function questionNext() {
 
-    let rq = questions[activeQID];
+    // let rq = questions[activeQID];
+
+    
 
     // show questions 
     qID.innerHTML = rq.qRefID
@@ -140,44 +151,6 @@ function optionesTrue() {
     }
 }
 
-function checkAnswer() {
-    let comp = 0;
-    let scoreMinus = 0;
-    let scorePlus = 0;
-
-
-    for (i = 1; i < 5; i++) {
-        // Get the checkbox
-        var oi = document.getElementById("option" + i);
-        var ci = document.getElementById("checkbox" + i);
-
-        if (ci.checked === oi.checked) {
-            comp++
-        };
-    }
-    if (comp == 4) {
-        scorePlus = scorePlus + 1;
-        document.getElementById("scorePlus").innerText = scorePlus;
-    } else {
-        scoreMinus = scoreMinus + 1;
-        document.getElementById("scoreMinus").innerText = scoreMinus;
-    }
-}
-
-
-
-function scorePlus() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
-
-}
-
-
-function scoreMinus() {
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
-}
-
 
 function optionsClear() {
     //
@@ -191,4 +164,22 @@ function optionsClear() {
     document.getElementById("option2").checked = false;
     document.getElementById("option3").checked = false;
     document.getElementById("option4").checked = false;
+}
+
+
+
+
+
+function checkAnswers() {
+
+    if (option1.checked == checkbox1.checked &&
+        option2.checked == checkbox2.checked &&
+        option3.checked == checkbox3.checked &&
+        option4.checked == checkbox4.checked
+    ) {
+        console.log("scorePLus");
+    } else {
+        console.log("scoreMinus");
+    }
+
 }
