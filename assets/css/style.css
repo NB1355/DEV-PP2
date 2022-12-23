@@ -154,7 +154,7 @@ footer {
 
 .x-checkbox {
   accent-color: #98c004;
-  display: none;
+  /* display: none; */
 }
 
 #test-type,
@@ -217,8 +217,8 @@ footer {
   color: #fafafa;
   width: 20em;
   font-size: 75%;
-  cursor: none;
-  display: none;
+  
+  /* display: none; */
 }
 
 .x-button:disabled {
