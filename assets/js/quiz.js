@@ -74,7 +74,7 @@ let questions = [{
 
 
 
-document.getElementById("xtest").addEventListener("click", randomSelect);
+document.getElementById("xtest").addEventListener("click", checkAnswers);
 
 
 
@@ -83,124 +83,146 @@ let quizTime = 45; // munits to calculate
 // >>  Variables Set up
 
 let maxNum = questions.length;
-let activeQID = 0;
-let count = 0;
+
+// let count = 0;
 let score = 0;
 
-let queryCount = 3;
+let queryCount = 4;
 var select = [];
+
+
+
+info1.innerHTML = "This test has " + maxNum + " questions, " + queryCount + " will be selected randomly ."
+info2.innerHTML = queryCount + " selected randomly ."
 
 function randomSelect() {
 
-    while (select.length <= queryCount) {
+    while (select.length < queryCount) {
         var num = Math.floor(Math.random() * maxNum) + 1;
 
         if (num <= maxNum && select.includes(num) == false) {
             select.push(num);
         }
+    };
+    select.sort();
+    console.log(select);
+}
+
+
+document.getElementById("x1-button").addEventListener("click", runQuiz);
+
+
+
+
+function runQuiz() {
+    
+    randomSelect();
+    document.getElementsByClassName("x-checkbox").display = "block";
+
+    let activeQID = select[0];
+
+    console.log(activeQID); // 2B deleted
+
+    questionNext(activeQID);
+    // document.getElementById("x1-button").style.display = "none";
+    document.getElementById("x1-button").disabled = true; 
+
+
+    
+
     }
+
+
+    // if (activeQID < queryCount) {
+
+
+    //     optionsClear();
+    //     document.getElementById("x1-button").value = "Go to next";
+    //     questionNext();
+    //     checkAnswers();
+    //     activeQID++;
+
+    // } else {
+    //     document.getElementById("x1-button").style.display = "none";
+
+    //     // document.getElementById("x1-button").value = "Submit The Test";      
+    //     // document.getElementById("x1-button").type = "submit";
+
+    // }
+
+
+
+
+
+
+function questionNext(activeQID) {
+
+    let rq = questions[activeQID -1];
+
+    // show questions 
+    qID.innerHTML = rq.qRefID
+    qText.innerHTML = rq.qRefText;
+    A.innerHTML = rq.checkbox1;
+    B.innerHTML = rq.checkbox2;
+    C.innerHTML = rq.checkbox3;
+    D.innerHTML = rq.checkbox4;
+    xCorrects = rq.corrects;
+
+    optionesTrue(xCorrects);
+
+};
+
+//setup correct options
+
+function optionesTrue() {
+
+    for (i = 0; i < xCorrects.length; i++) {
+        let correct = xCorrects.charAt(i);
+        switch (correct) {
+            case "1":
+                document.getElementById("checkbox1").checked = true;
+                break;
+            case "2":
+                document.getElementById("checkbox2").checked = true;
+                break;
+            case "3":
+                document.getElementById("checkbox3").checked = true;
+                break;
+            case "4":
+                document.getElementById("checkbox4").checked = true;
+                break;
+        }
+    }
+}
+
+
+function optionsClear() {
+    //
+
+    document.getElementById("checkbox1").checked = false;
+    document.getElementById("checkbox2").checked = false;
+    document.getElementById("checkbox3").checked = false;
+    document.getElementById("checkbox4").checked = false;
+
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = false;
+    document.getElementById("option3").checked = false;
+    document.getElementById("option4").checked = false;
 }
 
 
 
 
 
-    document.getElementById("x1-button").addEventListener("click", runQuiz);
+function checkAnswers() {
 
-
-    function runQuiz() {
-
-        if (activeQID < queryCount) {
-
-
-            optionsClear();
-            document.getElementById("x1-button").value = "Go to next";
-            questionNext();
-            checkAnswers();
-            activeQID++;
-
-        } else {
-            document.getElementById("x1-button").style.display = "none";
-
-            // document.getElementById("x1-button").value = "Submit The Test";      
-            // document.getElementById("x1-button").type = "submit";
-
-        }
+    if (option1.checked == checkbox1.checked &&
+        option2.checked == checkbox2.checked &&
+        option3.checked == checkbox3.checked &&
+        option4.checked == checkbox4.checked
+    ) {
+        console.log("scorePLus");
+    } else {
+        console.log("scoreMinus");
     }
-
-
-
-
-
-    function questionNext() {
-
-        let rq = questions[activeQID];
-
-        // show questions 
-        qID.innerHTML = rq.qRefID
-        qText.innerHTML = rq.qRefText;
-        A.innerHTML = rq.checkbox1;
-        B.innerHTML = rq.checkbox2;
-        C.innerHTML = rq.checkbox3;
-        D.innerHTML = rq.checkbox4;
-        xCorrects = rq.corrects;
-
-        optionesTrue(xCorrects);
-
-    };
-
-    //setup correct options
-
-    function optionesTrue() {
-
-        for (i = 0; i < xCorrects.length; i++) {
-            let correct = xCorrects.charAt(i);
-            switch (correct) {
-                case "1":
-                    document.getElementById("checkbox1").checked = true;
-                    break;
-                case "2":
-                    document.getElementById("checkbox2").checked = true;
-                    break;
-                case "3":
-                    document.getElementById("checkbox3").checked = true;
-                    break;
-                case "4":
-                    document.getElementById("checkbox4").checked = true;
-                    break;
-            }
-        }
-    }
-
-
-    function optionsClear() {
-        //
-
-        document.getElementById("checkbox1").checked = false;
-        document.getElementById("checkbox2").checked = false;
-        document.getElementById("checkbox3").checked = false;
-        document.getElementById("checkbox4").checked = false;
-
-        document.getElementById("option1").checked = false;
-        document.getElementById("option2").checked = false;
-        document.getElementById("option3").checked = false;
-        document.getElementById("option4").checked = false;
-    }
-
-
-
-
-
-    function checkAnswers() {
-
-        if (option1.checked == checkbox1.checked &&
-            option2.checked == checkbox2.checked &&
-            option3.checked == checkbox3.checked &&
-            option4.checked == checkbox4.checked
-        ) {
-            console.log("scorePLus");
-        } else {
-            console.log("scoreMinus");
-        }
-
-    }
+}

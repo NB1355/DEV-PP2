@@ -53,10 +53,11 @@
 
             <form class="x-form" method="POST" action="https://formdump.codeinstitute.net/">
 
-
-                <h2>Title Of the generated test <i class="fa-brands fa-think-peaks"></i></h2>
-
                 <input type="button" id="xtest" value="Test Function" style="background-color: orange; padding: 10px;">
+                <h2>Title Of the generated test <i class="fa-brands fa-think-peaks"></i></h2>
+                <p id="info1"></p>
+                <p id="info2"></p>
+                
 
 
 
@@ -66,33 +67,33 @@
                 <div class="x-checkbox">
                     <!-- <h4>Questin 0001 ................</h4> -->
 
-                    <label id="qID"></label><br>
-                    <label id="qText"></label><br><br>
+                    <label id="qID">rqRefID</label><br>
+                    <label id="qText">rqRefText</label><br><br>
 
                     <input type="checkbox" id="option1" name="pro-event" value="option1">
                     <input type="checkbox" id="checkbox1" name="pro-event" value="checkbox1" class="answers">
-                    <label id="A" for="option1"></label><br>
+                    <label id="A" for="option1">Option 1 ... </label><br>
 
                     <input type="checkbox" id="option2" name="pro-event" value="option2">
                     <input type="checkbox" id="checkbox2" name="pro-event" value="checkbox2" class="answers">
-                    <label id="B" for="option2"></label><br>
+                    <label id="B" for="option2">Option 2 ... </label><br>
 
                     <input type="checkbox" id="option3" name="pro-event" value="option3">
                     <input type="checkbox" id="checkbox3" name="pro-event" value="checkbox3" class="answers">
-                    <label id="C" for="option3"></label><br>
+                    <label id="C" for="option3">Option 3 ... </label><br>
 
                     <input type="checkbox" id="option4" name="pro-event" value="option4">
                     <input type="checkbox" id="checkbox4" name="pro-event" value="checkbox4" class="answers">
-                    <label id="D" for="option4"></label>
+                    <label id="D" for="option4">Option 4 ... </label>
                     <br>
-                    <label id="corrects"></label><br>
+                    <!-- <label id="corrects"></label><br> -->
 
                 </div>
                 <div class="x-steps">
                     <input type="button" class="x-button" id="x1-button" Value="Start The Test">
-                    <input type="button" class="x-button" id="x2-button" value="Show The Answer">
+                    <input type="button" class="x-button" id="x2-button" value="Show The Answer" disabled>
                     <input type="button" class="x-button" id="x3-button" value="Go To Next">
-                    <input type="button" class="x-button" id="x4-button" value="Submit The Test">
+                    <input type="button" class="x-button" id="x4-button" value="Submit The Test" disabled>
 
                 </div>
             </form>
