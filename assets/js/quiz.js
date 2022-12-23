@@ -72,28 +72,16 @@ let questions = [{
 
 // >> Parameters to be set by user
 
-
-
-document.getElementById("xtest").addEventListener("click", checkAnswers);
-
-
-
+let queryCount = 3; // number of the selected questions
 let quizTime = 45; // munits to calculate 
 
-// >>  Variables Set up
-
+var select = [];
 let maxNum = questions.length;
 
-// let count = 0;
-let score = 0;
 
-let queryCount = 4;
-var select = [];
+info1.innerHTML = "This test has " + maxNum + " questions, " + queryCount + " are selected randomly ."
 
 
-
-info1.innerHTML = "This test has " + maxNum + " questions, " + queryCount + " will be selected randomly ."
-info2.innerHTML = queryCount + " selected randomly ."
 
 function randomSelect() {
 
@@ -102,53 +90,27 @@ function randomSelect() {
 
         if (num <= maxNum && select.includes(num) == false) {
             select.push(num);
+            
+       var button = document.createElement("button");
+        button.innerHTML = num;
+        button.className = "bSelect";
+
+
+        var ul = document.getElementsByTagName("ul")[1];
+        ul.appendChild(button);
+
         }
     };
-    select.sort();
-    console.log(select);
+    console.log (select); // Just for Control, delete later! 
+    info1.innerHTML = "This test has " + maxNum + " questions, " + queryCount + " are selected randomly ."  
+
 }
 
 
-document.getElementById("x1-button").addEventListener("click", runQuiz);
+document.getElementById("x1-button").addEventListener("click", randomSelect);
 
 
 
-
-function runQuiz() {
-    
-    randomSelect();
-    document.getElementsByClassName("x-checkbox").display = "block";
-
-    let activeQID = select[0];
-
-    console.log(activeQID); // 2B deleted
-
-    questionNext(activeQID);
-    // document.getElementById("x1-button").style.display = "none";
-    document.getElementById("x1-button").disabled = true; 
-
-
-    
-
-    }
-
-
-    // if (activeQID < queryCount) {
-
-
-    //     optionsClear();
-    //     document.getElementById("x1-button").value = "Go to next";
-    //     questionNext();
-    //     checkAnswers();
-    //     activeQID++;
-
-    // } else {
-    //     document.getElementById("x1-button").style.display = "none";
-
-    //     // document.getElementById("x1-button").value = "Submit The Test";      
-    //     // document.getElementById("x1-button").type = "submit";
-
-    // }
 
 
 
@@ -157,7 +119,7 @@ function runQuiz() {
 
 function questionNext(activeQID) {
 
-    let rq = questions[activeQID -1];
+    let rq = questions[activeQID - 1];
 
     // show questions 
     qID.innerHTML = rq.qRefID
@@ -197,8 +159,7 @@ function optionesTrue() {
 
 
 function optionsClear() {
-    //
-
+    
     document.getElementById("checkbox1").checked = false;
     document.getElementById("checkbox2").checked = false;
     document.getElementById("checkbox3").checked = false;
@@ -209,9 +170,6 @@ function optionsClear() {
     document.getElementById("option3").checked = false;
     document.getElementById("option4").checked = false;
 }
-
-
-
 
 
 function checkAnswers() {

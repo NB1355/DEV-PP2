@@ -171,9 +171,10 @@ footer {
 }
 
 .x-form p {
-  color: greenyellow;
+  color: #fafafa;
   margin-bottom: 5px;
   margin-top: 5px;
+
 }
 
 .x-checkbox input {
@@ -231,5 +232,18 @@ footer {
   color: #98c004;
 }
 
+.bSelect {
+  margin: 2px;
+  border-radius: 2px;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: orange;
+  color: #0c162c;
+  width: 5%;
+  font-size: 75%;
 
+}
 
