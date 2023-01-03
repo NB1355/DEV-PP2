@@ -101,12 +101,7 @@ header {
   background-color: greenyellow;
 }
 
-/*--------------------Quiz Process Relevant----------------------------*/
-.answers {
-  /* display: none; */
-  backdrop-filter: sepia(90%);
-  opacity: 0.33;
-}
+
 
 /*---------------------------Footer------------==================-----*/
 
@@ -154,7 +149,7 @@ footer {
 
 .x-checkbox {
   accent-color: #98c004;
-  /* display: none; */
+  display: none;
 }
 
 #test-type,
@@ -218,8 +213,7 @@ footer {
   color: #fafafa;
   width: 20em;
   font-size: 75%;
-  
-  /* display: none; */
+
 }
 
 .x-button:disabled {
@@ -227,12 +221,12 @@ footer {
   opacity: 0.33;
 }
 
-.x-button:hover {
+/* .x-button:hover {
   background-color: #fafafa;
   color: #98c004;
-}
+} */
 
-.bSelect {
+.x-questions {
   margin: 2px;
   border-radius: 2px;
   padding: 5px;
@@ -247,3 +241,9 @@ footer {
 
 }
 
+/*--------------------Quiz Process Relevant----------------------------*/
+.answers {
+  display: none;
+  backdrop-filter: sepia(90%);
+  opacity: 0.33;
+}
