@@ -1,0 +1,23 @@
+{
+    "questions" :
+    [{
+        "qRefID": "q001",
+        "qRefText": "Question ID: q001 - sample question for testing",
+        "checkbox1": "1q001 answer no.1 for question q001",
+        "checkbox2": "2q001 answer no.2 for question q001",
+        "checkbox3": "3q001 answer no.3 for question q001, correct",
+        "checkbox4": "4q001 answer no.4 for question q001, correct",
+        "corrects": "1,4,r,3"
+    },
+    {
+        "qRefID": "q002",
+        "qRefText": "Question ID: q002 - sample question for testing",
+        "checkbox1": "1q002 answer no.1 for question q002, correct",
+        "checkbox2": "2q002 answer no.2 for question q002",
+        "checkbox3": "3q002 answer no.3 for question q002",
+        "checkbox4": "4q002 answer no.4 for question q002, correct",
+        "corrects": "14"
+    }
+    ]
+
+}
